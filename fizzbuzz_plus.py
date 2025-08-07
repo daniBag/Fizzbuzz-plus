@@ -13,7 +13,7 @@ def is_primary(num):
                 i = 5
                 while i <= math.sqrt(num):
                     if (num % i == 0) or (num % (i + 2) == 0):
-                        break
+                        return False
                     i += 6
                 prime = True
     return prime
