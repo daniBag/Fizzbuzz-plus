@@ -18,10 +18,7 @@ def is_prime(num: int) -> bool:
 
 def fizzbuzz(start=1, end=100):
     result = []
-    if end < start:
-        temp = start
-        start = end
-        end = temp
+    start, end = sorted((start, end))
     for i in range(start, end + 1):
         if i % 15 == 0:
             result.append("Fizzbuzz")

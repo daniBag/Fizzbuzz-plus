@@ -3,19 +3,18 @@ import unittest
 
 correct_result = ["1", "Prime", "Prime", "4", "Prime", "Fizz", "Prime", "8", "Fizz", "Buzz", "Prime", "Fizz", "Prime", "14", "Fizzbuzz", "16", "Prime", "Fizz", "Prime", "Buzz"]
 
-class TestNumsDivision(unittest.TestCase):
+class TestFizzbuzzPlus(unittest.TestCase):
 
     def test_prints(self):
-        result = fizzbuzz(1, 20)
-        self.assertEqual(result, correct_result)
+        self.assertEqual(fizzbuzz(1, 20), correct_result)
 
     def test_reversed_range(self):
-        assert correct_result == fizzbuzz(20, 1)
+        self.assertEqual(correct_result, fizzbuzz(20, 1))
 
     def test_edge_cases(self):
-        assert fizzbuzz(25, 25) == ["Buzz"]
-        assert fizzbuzz(49, 49) == ["49"]
+        self.assertEqual(fizzbuzz(25, 25), ["Buzz"])
+        self.assertEqual(fizzbuzz(49, 49), ["49"])
 
     def test_single_number_cases(self):
-        assert fizzbuzz(3,3) == ["Prime"]
-        assert fizzbuzz(15,15) == ["Fizzbuzz"]
+        self.assertEqual(fizzbuzz(3, 3), ["Prime"])
+        self.assertEqual(fizzbuzz(15, 15), ["Fizzbuzz"])
